@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Generators - Bleun Engineering</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Abel|Orbitron:400,500,900,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='css/slider_multiple.css' />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="author" content="Walter Kohl, wjk-Software" />
+    <meta name="description" content="Web-Site of Bleun-Engineering in Germany und Thailand. A team of developers for technical products for technical products with a focus on infrared, magnetic generators and (electric) motor technology." />
+    <meta name="keywords" content="Bleun, Engineering, Engineers, Germany, Thailand, developers, magnet, generators, electric, motors, infrared" />
+    <meta name="generator" content="Visual Studio" />
+</head>
+<body id="body">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $(window).resize(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+            var cook = document.cookie;
+            if (cook == "" || cook == undefined || cook.length == 0) {
+                document.getElementById("cookie").style.visibility = "visible";
+            }
+            else {
+                if (readCookie(cook)) {
+                    document.getElementById("cookie").style.visibility = "hidden";
+                }
+                else {
+                    document.getElementById("cookie").style.visibility = "visible";
+                }
+            }
+            var fileNameDE = "http://www.bleun.de/" + location.href.split("/").slice(-1);
+            $('#changeDE').attr('href', fileNameDE);
+            var fileNameEN = "http://www.bleun.com/" + location.href.split("/").slice(-1);
+            $('#changeEN').attr('href', fileNameEN);
+        });
+        function readCookie(cook) {
+            var ca = cook.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                if (ca[i].indexOf('cookieinfo') >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = "cookieinfo=true; path=/";
+            document.getElementById("cookie").style.visibility = "hidden";
+        }
+    </script>
+    <header>
+        <div class="container-fluid">
+            <div class="row" style="background-color: white;" id="cookie">
+                <div class="col-xs-8 col-md-10">
+                    <div id="cookies1">
+                        <span>We use to the page control "<a href="impress.html#cookies">Cookies</a>". By visiting the site you agree.</span>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div id="cookies2">
+                        <a href="javascript:setCookie()"><img src="images/2.jpg" alt="close" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="compName">
+                        Bleun Engineering International
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div id="headerImg1">
+                        <a href="http://www.bleun.de" target="_self"><img src="images/bleun-logo.png" alt="Bleun-Logo" id="bleunLogo" /></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="headerImg2">
+                        <img src="images/cl2.gif" alt="Service" class="rotate img-responsive" id="pictop" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="btnLang">
+                        <a href="http://www.bleun.de" id="changeDE" target="_self" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Wechselt zur deutschen Site."><img src="images/de.jpg" alt="deutsch" /></a>
+                        <a href="http://www.bleun.com" id="changeEN" target="_self" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="English is already selected."><img src="images/gb.jpg" alt="English" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>    
+    <nav class="navbar navbar-default information" style="opacity: 1.0; background: blue;">
+        <div class="container-fluid">
+            <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Navigation show/hide</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: blue;">
+                <ul class="nav navbar-nav" role="navigation">
+                    <li><a href="index.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-home"></span>&nbsp;Homepage<span class="sr-only">(up-to-date)</span></a></li>
+                    <li><a href="about.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-user"></span>&nbsp;About us</a></li>
+                    <li class="dropdown" style="background: white;">
+                        <a href="#" class="dropdown-toggle btn-lg btn-default active" style="color: blue;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span>&nbsp;Development&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="infrared.html" role="button" class="btn-lg" style="color: blue;">Infrarot</a></li>
+                            <li class="active"><a href="generator.html" role="button" class="btn-lg" style="color: white;">Generatoren</a></li>
+                            <li><a href="engines.html" role="button" class="btn-lg" style="color: blue;">Motoren</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" role="navigation">
+                    <li><a href="impress.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Impress</a></li>
+                    <li><a href="contact.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="content">
+        <div>
+            <h1><small>Generators in combination with magnetic motors and electric motors</small><br />An ongoing Issue</h1>
+        </div>
+        <div class="information">
+            <h4>Entry</h4>
+            <p>
+                As soon as a project has involved so much commitment and capital as in "the development of effective energy production and its use or its transformation into other forms of energy, with the inclusion of natural existing free energies".
+                <br />This included the research and development of magnet generators and motors, in combination with generators and electric motors, to improve the efficiency of drives, but mainly for electric motors.
+                <br />Many attempts have led to our findings (below some pictures) by which we can conclude which future projects will bring success.
+            </p>
+        </div>
+        <div id='my_carousel_ct' class='carousel-container' style="text-align: center; margin: 0 auto;">
+            <div id="my_carousel_1" class="carousel slide">
+                <!-- Carousel items -->
+                <div id="my_carousel_2" class="carousel-inner rs-slider">
+                    <div class="item  active">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/n_DSCN0519.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 1: Generator coils for energy generation.</h4>
+                                <p class="ts_txt">
+                                    Test arrangement: Generator coils for the generation of energy and for the efficiency of the DC brushless motor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/n_DSCN0339.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 2: Efficiency increase of electric motors.</h4>
+                                <p class="ts_txt">
+                                    Test arrangement: Efficiency increase of electric motors: DC brushless motor with induction coils.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/n_DSCN0507.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 3: Our own coil production.</h4>
+                                <p class="ts_txt">
+                                    We had to wind up the coils manually, some of them adventurous constructions, in order to be much more flexible than if we had placed them in a professional workshop.
+                                    <br />Many other tools and components were also made by hand.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/DSCN0424.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 4: Motor with three induction coils.</h4>
+                                <p class="ts_txt">
+                                    Another test arrangement: Efficiency increase of electric motors: DC brushless motor with three induction coils.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/n_DSCN0633.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 5: Motor-magnet generator combination.</h4>
+                                <p class="ts_txt">
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/n_DSCN0659.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 6: Efficient electric motor</h4>
+                                <p class="ts_txt">
+                                    Prototype. Efficient electric motor, integrated with three stages magnetic motor, generator and electric motor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/n_DSCN1504.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 7: Three stage magnetic motor</h4>
+                                <p class="ts_txt">
+                                    Three-stage magnetic motor, 250W alternator coupled as a generator and starter motor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/DSCN1045.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 8: Three stage magnetic motor, generator 220V</h4>
+                                <p class="ts_txt">
+                                    Three-stage magnetic motor, generator 800W / 220V and starter motor connected in series.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/DSCN1722.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 9: Motors and generators integrated (front view).</h4>
+                                <p class="ts_txt">
+                                    Prototype. Efficient electric motor, integrated with three stages magnetic motor, generator and electric motor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/DSCN1724.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 10: Motors and generators (rear view).</h4>
+                                <p class="ts_txt">
+                                    Prototype. Efficient electric motor, integrated with three stages magnetic motor, generator and electric motor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/Generatoren/S6301252.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 11: Model test.</h4>
+                                <p class="ts_txt">
+                                    Model test: DC brushless motor with magnetic motor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-custom" href="#my_carousel_1" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-custom" href="#my_carousel_1" data-slide="next">&rsaquo;</a>
+            </div>
+        </div>
+        <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
+        <script type='text/javascript' src='js/wpts_slider_multiple.js'></script>
+        <script>
+            var size = {
+                width: document.body.clientWidth,
+                height: window.innerHeight || document.body.clientHeight
+            }
+            jQuery(document).ready(function (e) {
+                jQuery('#my_carousel_ct').tsSlider({
+                    thumbs: ''
+                 , width: size.width - 50
+                 , showText: true
+                 , autoplay: 15000
+                 , imgWidth: size.width - 50
+                 , imgHeight: size.width - 50
+                 , imgMarginTop: 0
+                 , imgMarginLeft: 0
+                 , squared: true
+                 , textSquarePosition: 4
+                 , textPosition: 'top'
+                 , imgAlignment: 'Center'
+                 , textColor: 'F00'
+                 , skin: 'transparent'
+                 , arrows: 'ts-arrow-1'
+                 , sliderHeight: 600
+                 , effects: 'fade'
+                    , titleBold: 'false'
+                    , titleItalic: 'false'
+                    , textBold: 'true'
+                    , textItalic: 'false'
+                    , textWidth: 99
+                 , background_sld: '#FFF'
+                 , background_caption: '#000'
+                });
+            });
+        </script>
+        <div class="top clearing"><a href="#body">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+    </div>
+    <footer>
+        <script>
+            function datum() {
+                var d = new Date();
+                var e = d.getFullYear().toString();
+                document.write(e.substr(2, 2));
+            }
+        </script>
+        &copy; Copyrights 2016-<script>datum()</script> by <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6b;&#x6f;&#x68;&#x6c;&#x2e;&#x77;&#x61;&#x6c;&#x74;&#x65;&#x72;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#x26;&#x73;&#x75;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x3d;&#x46;&#x72;&#x6f;&#x6d;&#x20;&#x74;&#x68;&#x65;&#x20;&#x42;&#x6c;&#x65;&#x75;&#x6e;&#x2d;&#x53;&#x69;&#x74;&#x65;&#x3a;&#x26;&#x62;&#x6f;&#x64;&#x79;&#x3d;&#x50;&#x6c;&#x65;&#x61;&#x73;&#x65;&#x20;&#x74;&#x65;&#x6c;&#x6c;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x69;&#x64;&#x65;&#x61;&#x2e;" target="_blank">Walter Kohl, grad. Engineer</a> - wjk-Software&reg;. Switzerland.
+    </footer>
+</body>
+</html>

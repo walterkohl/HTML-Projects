@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Infrared - Bleun Engineering</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Abel|Orbitron:400,500,900,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='css/slider_multiple.css' />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="author" content="Walter Kohl, wjk-Software" />
+    <meta name="description" content="Web-Site of Bleun-Engineering in Germany und Thailand. A team of developers for technical products for technical products with a focus on infrared, magnetic generators and (electric) motor technology." />
+    <meta name="keywords" content="Bleun, Engineering, Engineers, Germany, Thailand, developers, magnet, generators, electric, motors, infrared" />
+    <meta name="generator" content="Visual Studio" />
+</head>
+<body id="body">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $(window).resize(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+            var cook = document.cookie;
+            if (cook == "" || cook == undefined || cook.length == 0) {
+                document.getElementById("cookie").style.visibility = "visible";
+            }
+            else {
+                if (readCookie(cook)) {
+                    document.getElementById("cookie").style.visibility = "hidden";
+                }
+                else {
+                    document.getElementById("cookie").style.visibility = "visible";
+                }
+            }
+            var fileNameDE = "http://www.bleun.de/" + location.href.split("/").slice(-1);
+            $('#changeDE').attr('href', fileNameDE);
+            var fileNameEN = "http://www.bleun.com/" + location.href.split("/").slice(-1);
+            $('#changeEN').attr('href', fileNameEN);
+        });
+        function readCookie(cook) {
+            var ca = cook.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                if (ca[i].indexOf('cookieinfo') >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = "cookieinfo=true; path=/";
+            document.getElementById("cookie").style.visibility = "hidden";
+        }
+    </script>
+    <header>
+        <div class="container-fluid">
+            <div class="row" style="background-color: white;" id="cookie">
+                <div class="col-xs-8 col-md-10">
+                    <div id="cookies1">
+                        <span>We use to the page control "<a href="impress.html#cookies">Cookies</a>". By visiting the site you agree.</span>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div id="cookies2">
+                        <a href="javascript:setCookie()"><img src="images/2.jpg" alt="close" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="compName">
+                        Bleun Engineering International
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div id="headerImg1">
+                        <a href="http://www.bleun.de" target="_self"><img src="images/bleun-logo.png" alt="Bleun-Logo" id="bleunLogo" /></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="headerImg2">
+                        <img src="images/cl2.gif" alt="Service" class="rotate img-responsive" id="pictop" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="btnLang">
+                        <a href="http://www.bleun.de" id="changeDE" target="_self" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Wechselt zur deutschen Site."><img src="images/de.jpg" alt="deutsch" /></a>
+                        <a href="http://www.bleun.com" id="changeEN" target="_self" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="English is already selected."><img src="images/gb.jpg" alt="English" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>  
+    <nav class="navbar navbar-default information" style="opacity: 1.0; background: blue;">
+        <div class="container-fluid">
+            <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Navigation show/hide</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: blue;">
+                <ul class="nav navbar-nav" role="navigation">
+                    <li><a href="index.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-home"></span>&nbsp;Homepage<span class="sr-only">(up-to-date)</span></a></li>
+                    <li><a href="about.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-user"></span>&nbsp;About us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle btn-lg btn-default active" style="color: blue;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span>&nbsp;Development&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="background: white;">
+                            <li class="active"><a href="infrared.html" role="button" class="btn-lg" style="color: white;">Infrarot</a></li>
+                            <li><a href="generator.html" role="button" class="btn-lg" style="color: blue;">Generatoren</a></li>
+                            <li><a href="engines.html" role="button" class="btn-lg" style="color: blue;">Motoren</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" role="navigation">
+                    <li><a href="impress.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Impress</a></li>
+                    <li><a href="contact.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="content">
+        <div>
+            <h1>Infrared Technology<br /><small>A development focus</small></h1>
+        </div>
+        <div class="information">
+            <h4>Entry</h4>
+            <p>
+                Infrared heating is widely used today. This was not always the case. The developers of "Bleun", in front Dietmar Loewe, developed the first concepts and brought up to the patent. He was it also, who placed the first heating plates on the market.
+                <br />Thus the creativity in our house however was not to end, but many other products were developed and implemented on the basis of "Infrared".
+                <br />Check out below our range of photo, to get a little insight into our constructives.
+            </p>
+        </div>
+        <div id='my_carousel_ct' class='carousel-container' style="text-align: center; margin: 0 auto;">
+            <div id="my_carousel_1" class="carousel slide">
+                <!-- Carousel items -->
+                <div id="my_carousel_2" class="carousel-inner rs-slider">
+                    <div class="item active">
+                        <div class="ts_border">
+                            <img src="images/infrared/11.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 1: Infrared heaters</h4>
+                                <p class="ts_txt">
+                                    Our actual start began with infrared heaters, which due to their design showed a very high degree of efficiency, but they were very expensive in the production.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img class="img-responsive center-block img-rounded" src="images/infrared/17-10-08.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 2: Painted infrared hotplate</h4>
+                                <p class="ts_txt">
+                                    In contrast to heaters, infrared plates were much cheaper to manufacture. The most diverse types were developed by us and a part of them was produced by us, although the energy efficiency was slightly worse, the infrared plates are more favorable in questions "costs / benefits".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img class="img-responsive center-block img-rounded" src="images/infrared/SAM_1729.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 3: Infrared plates after powder coating on cooling, at Bangkok (Thailand).</h4>
+                                <p class="ts_txt">
+                                    Here "Bleun" deviated briefly from the concept "research and development" and produced itself, in order to bring the first heating plates on the market.                                
+				</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img class="img-responsive center-block img-rounded" src="images/infrared/DSCN0243.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 4: Heating plate back</h4>
+                                <p class="ts_txt">
+                                    The production of heating panels in Germany soon turned out to be very uneconomical and new locations were being sought.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/SAM_1762.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 5: Infrared panels for room heating, in production.</h4>
+                                <p class="ts_txt">
+                                    A partner in Thailand was quickly found to be able to produce infrared panels and accessories, much cheaper.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/100_0543.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 6: Color design of the infrared plates.</h4>
+                                <p class="ts_txt">
+                                    Color coating and design of the infrared plates can be adapted to customer requirements. The infrared plates were powdercoated with the motifs: sandstone and black marble.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/SAM_1869.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 7: Infrared heating for chairs</h4>
+                                <p class="ts_txt">
+                                    Soon further requirements were placed on the developers, the new technology should move into the everyday life of the people.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/21.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 8: Heated chair as a prototype.</h4>
+                                <p class="ts_txt">
+                                    A further idea was to install long-wave infrared heaters, for the health and wellness area, in sunbeds, chairs and tables.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/31.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 9: Rocking chair as a well-being object.</h4>
+                                <p class="ts_txt">
+                                    Experiments were made with different models to cover different tastes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/SAM_1879.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 10: Heating plate under the chair.</h4>
+                                <p class="ts_txt">
+                                    During the exploration phase, various concepts had to be tested to adapt the heating panels to the respective chair shapes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/Tisch_17-10-08.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 11: Table with built-in infrared heaters for outside and inside.</h4>
+                                <p class="ts_txt">
+                                    Not only chair and lounger concepts were considered, but also tables for different applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/SAM_1997.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 12: Light terrasse chair.</h4>
+                                <p class="ts_txt">
+                                    This terrace chair also found its way into the production.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/Kattrin auf Sessel.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 13: Fun with a chair equipped with an infrared heater.</h4>
+                                <p class="ts_txt">
+                                    Also this prototype, developed by us, found his lover.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/23.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 14: On the Berlin wall (Eastside Gallery).</h4>
+                                <p class="ts_txt">
+                                    This infra-red chair, with its feel-good factor, found everywhere its followers (lovers), also here: the remains of the Berlin wall.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/43.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 15: Test of infrared heaters for food in live mode.</h4>
+                                <p class="ts_txt">
+                                    Other topics were occupied, such as the uneconomic warming of food in the catering industry, which was significantly more cost-effective with infrared heaters.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/S6303641.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 16: Extensive tests in a Thai hotel company.</h4>
+                                <p class="ts_txt">
+                                <p>
+                                    Tests in a hotel have proven that the keeping of food with infrared can save enormous costs, unlike conventional methods.
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/42.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 17: Conventional food warmer.</h4>
+                                <p class="ts_txt">
+                                    Also in the area with the traditional, alcoholic, food heaters, we pushed forward with our concept "infrared", were not only to achieve better energy results, also the playing with open fire and the odor removal away.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/S6303637.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 18: Infrared-powered food warmer (Prototype).</h4>
+                                <p class="ts_txt">
+                                    In the end, we produced a prototype, which served as a basis for further research and market analysis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/51.png" />
+                            <div class="carousel-caption">
+                                <h4>Bild 19: A hot water heater (boiler, storage) equipped with an infrared heating system.</h4>
+                                <p class="ts_txt">
+                                    Some boiler prototypes have been developed to produce hot water with infrared heaters. This application proved to be much more efficient.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/Trockner-privileg.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 20: A wash dryer equipped with a infrared heater.</h4>
+                                <p class="ts_txt">
+                                    A much better efficiency was achieved with a condensation wash dryer (standard model), by the conversion with an infrared heating.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/Trockner_kondensationsschema.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Bild 21: : The scheme infrared heating and the condensation principle.</h4>
+                                <p class="ts_txt">
+                                    It was important to check whether the condensation technology (method) using infrared heat is the same as in normal heating.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/F_DSCN4636.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 22: Packing freshener, commercially available absorber refrigerator for tests.</h4>
+                                <p class="ts_txt">
+                                    In another field experiment with infrared radiation, this time it was about cold, which should be generated with long-wave infrared light.
+                                    <br />An absorber refrigerator retrofitted to operate with long-wave infrared light as a heater provided the same cooling results but with much less energy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/F_DSCN4637.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 23: The absorber refrigerator without protective back wall.</h4>
+                                <p class="ts_txt">
+                                    For this absorber refrigerator, a standard appliance, as can be found in many hotels or on camp sites, the energy consumption is to be reduced by half.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/F_DSCN4669.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 24: A first look inside the device ...</h4>
+                                <p class="ts_txt">
+                                    Critical aspects had to be taken into account during the development: for example, whether the device offered sufficient space for the conversion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/F_DSCN4670.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 25: and also a second look into the device ...</h4>
+                                <p class="ts_txt">
+                                    gave us the hope of saving at least a third of the energy consumption values stated.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/F_DSCN4758.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 26: The absorber unit after the conversion.</h4>
+                                <p class="ts_txt">
+                                    The given space in this absorber refrigerator was not sufficient to fully integrate the newly developed infrared heating system.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ts_border">
+                            <img src="images/infrared/F_DSCN4932.JPG" />
+                            <div class="carousel-caption">
+                                <h4>Bild 27: The device on a first test.</h4>
+                                <p class="ts_txt">
+                                    Despite all the adversities that can be avoided in the next experiments, a considerable energy saving was achieved in the first experiment, as our measurements proved. There is potential upwards (or downwards).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-custom" href="#my_carousel_1" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-custom" href="#my_carousel_1" data-slide="next">&rsaquo;</a>
+            </div>
+        </div> <!--  //my_carousel_ct -->
+        <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
+        <script type='text/javascript' src='js/wpts_slider_multiple.js'></script>
+        <script>
+            var size = {
+                width: document.body.clientWidth,
+                height: window.innerHeight || document.body.clientHeight
+            }
+            jQuery(document).ready(function (e) {
+                jQuery('#my_carousel_ct').tsSlider({
+                    thumbs: ''
+                    , width: size.width - 50
+                    , showText: true
+                    , autoplay: 15000
+                    , imgWidth: size.width - 50
+                    , imgHeight: size.width - 50
+                    , imgMarginTop: 0
+                    , imgMarginLeft: 0
+                    , squared: true
+                    , textSquarePosition: 4
+                    , textPosition: 'top'
+                    , imgAlignment: 'Center'
+                    , textColor: 'F00'
+                    , skin: 'transparent'
+                    , arrows: 'ts-arrow-1'
+                    , sliderHeight: 600
+                    , effects: 'fade'
+                    , titleBold: 'false'
+                    , titleItalic: 'false'
+                    , textBold: 'true'
+                    , textItalic: 'false'
+                    , textWidth: 99
+                    , background_sld: '#FFF'
+                    , background_caption: '#000'
+                });
+            });
+        </script>
+        <div class="top clearing"><a href="#body">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+    </div>
+    <footer>
+        <script>
+            function datum() {
+                var d = new Date();
+                var e = d.getFullYear().toString();
+                document.write(e.substr(2, 2));
+            }
+        </script>
+        &copy; Copyrights 2016-<script>datum()</script> by <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6b;&#x6f;&#x68;&#x6c;&#x2e;&#x77;&#x61;&#x6c;&#x74;&#x65;&#x72;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#x26;&#x73;&#x75;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x3d;&#x46;&#x72;&#x6f;&#x6d;&#x20;&#x74;&#x68;&#x65;&#x20;&#x42;&#x6c;&#x65;&#x75;&#x6e;&#x2d;&#x53;&#x69;&#x74;&#x65;&#x3a;&#x26;&#x62;&#x6f;&#x64;&#x79;&#x3d;&#x50;&#x6c;&#x65;&#x61;&#x73;&#x65;&#x20;&#x74;&#x65;&#x6c;&#x6c;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x69;&#x64;&#x65;&#x61;&#x2e;" target="_blank">Walter Kohl, grad. Engineer</a> - wjk-Software&reg;. Switzerland.
+    </footer>
+</body>
+</html>

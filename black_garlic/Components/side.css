@@ -1,0 +1,91 @@
+html {
+    background-color: gold;
+}
+body {
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    min-width: 300px;
+    margin: 0 20% 0 20%;
+}
+a:link {
+    color: rgb(253, 253, 11);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(253, 253, 11);;
+    text-decoration: none;
+}
+a:hover {
+    color: chartreuse;
+    text-decoration: none;
+}
+header {
+    min-height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+header img {
+    position: relative;
+    width: 10%;
+    top: 10px;
+    left: 85%;
+}
+footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+}
+section {
+    min-height: 150px;
+    width: 62%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+}
+section label {
+    color: white;
+}
+section li {
+    color: white;
+}
+section .headline {
+    color: goldenrod;
+    font-size: 90%;
+    font-weight: bold;
+    background-color: black;    
+    position: relative;
+    top: -20px;
+    left: 15px;
+}
+section p {
+    color: white;
+}
+section .col-md-3 {
+    text-align: center;
+}
+section .col-md-4 {
+    text-align: center;
+}
+section h4 {
+    color: white;
+    font-size: 100%;
+}
+section h5 {
+    color: goldenrod;
+    font-size: 110%;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+section h6 {
+    color: white;
+    font-size: 100%;
+    font-style: italic;
+}

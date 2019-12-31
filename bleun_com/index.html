@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Homepage - Bleun Engineering</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Abel|Orbitron:400,500,900,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="author" content="Walter Kohl, wjk-Software" />
+    <meta name="description" content="Web-Site of Bleun-Engineering in Germany und Thailand. A team of developers for technical products for technical products with a focus on infrared, magnetic generators and (electric) motor technology." />
+    <meta name="keywords" content="Bleun, Engineering, Engineers, Germany, Thailand, developers, magnet, generators, electric, motors, infrared" />
+    <meta name="generator" content="Visual Studio" />
+</head>
+<body id="body">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $(window).resize(function () {
+        if (document.body.clientWidth < 920) {
+            $('#pictop').hide();
+        }
+        else {
+            $('#pictop').show();
+        }
+    });
+    </script>
+    <script>
+        $(document).ready(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+            var cook = document.cookie;
+            if (cook == "" || cook == undefined || cook.length == 0) {
+                document.getElementById("cookie").style.visibility = "visible";
+            }
+            else {
+                if (readCookie(cook)) {
+                    document.getElementById("cookie").style.visibility = "hidden";
+                }
+                else {
+                    document.getElementById("cookie").style.visibility = "visible";
+                }
+            }
+            var fileNameDE = "http://www.bleun.de/" + location.href.split("/").slice(-1);
+            $('#changeDE').attr('href', fileNameDE);
+            var fileNameEN = "http://www.bleun.com/" + location.href.split("/").slice(-1);
+            $('#changeEN').attr('href', fileNameEN);
+        });
+        function readCookie(cook) {
+            var ca = cook.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                if (ca[i].indexOf('cookieinfo') >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = "cookieinfo=true; path=/";
+            document.getElementById("cookie").style.visibility = "hidden";
+        }
+    </script>
+    <header>
+        <div class="container-fluid">
+            <div class="row" style="background-color: white;" id="cookie">
+                <div class="col-xs-8 col-md-10">
+                    <div id="cookies1">
+                        <span>We use to the page control "<a href="impress.html#cookies">Cookies</a>". By visiting the site you agree.</span>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div id="cookies2">
+                        <a href="javascript:setCookie()"><img src="images/2.jpg" alt="close" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="compName">
+                        Bleun Engineering International
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div id="headerImg1">
+                        <a href="http://www.bleun.de" target="_self"><img src="images/bleun-logo.png" alt="Bleun-Logo" id="bleunLogo" /></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="headerImg2">
+                        <img src="images/cl2.gif" alt="Service" class="rotate img-responsive" id="pictop" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="btnLang">
+                        <a href="http://www.bleun.de" id="changeDE" target="_self" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Wechselt zur deutschen Site."><img src="images/de.jpg" alt="deutsch" /></a>
+                        <a href="http://www.bleun.com" id="changeEN" target="_self" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="English is already selected."><img src="images/gb.jpg" alt="English" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default information" style="opacity: 1.0; background: blue;">
+        <div class="container-fluid">
+            <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Navigation show/hide</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und koennen dann ein- und ausgeblendet werden -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: blue;">
+                <ul class="nav navbar-nav" role="navigation">
+                    <li class="active"><a href="index.html" role="button" class="btn-lg" style="color: blue;"><span class="glyphicon glyphicon-home"></span>&nbsp;Homepage<span class="sr-only">(up-to-date)</span></a></li>
+                    <li><a href="about.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-user"></span>&nbsp;About us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle btn-lg" style="color: white;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span>&nbsp;Development&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="background: white;">
+                            <li><a href="infrared.html" role="button" class="btn-lg" style="color: blue;">Infrared</a></li>
+                            <li><a href="generator.html" role="button" class="btn-lg" style="color: blue;">Generators</a></li>
+                            <li><a href="engines.html" role="button" class="btn-lg" style="color: blue;">Motors</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" role="navigation">
+                    <li><a href="impress.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Impress</a></li>
+                    <li><a href="contact.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Homepage<br /><small>Our Web Site</small></h1>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="information">
+                        <p>
+                            We develop for the industry and the SME sector. Our focus is in the areas of infrared and motor technology. We have produced already ourself, under the logo "Bleun Energiesysteme", what we see as an exception however.                            
+                            <br />The credo of our development is and was already "energy efficiency" since our launch. We have recognized the potential of infrared in the area of "Heating" as first and led patent this technology.
+                            <br />Necessarily or better: due to the spirit of the times, our development focus is currently more motor technology (efficiency).
+                            <br />Our staff is subject to a certain rotation necessarily since the requirements must be based on the needs of the particular time and the necessary know-how.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/infrarot.png" alt="Infrarot">
+                        <div class="caption" style="min-height: 300px;">
+                            <h3>Infrared</h3>
+                            <p style="min-height: 200px;">The infrared technology was and is a focus of our development work. In this area we can collect a wide range of experiences and explores much basic knowledge.</p>
+                            <p><a href="infrared.html" class="btn btn-primary" role="button">Read more...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/motoren.jpg" alt="Magentgenerator">
+                        <div class="caption" style="min-height: 300px;">
+                            <h3>Magnetic Generators</h3>
+                            <p style="min-height: 200px;">Development of magnetic generators is one of the areas where we do intensive research. We think that a great potential of energetic income to achieve here. We have already made experience.</p>
+                            <p><a href="generator.html" class="btn btn-primary" role="button">Read more...</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/generatoren.jpg" alt="Motor">
+                        <div class="caption" style="min-height: 300px;">
+                            <h3>Motors</h3>
+                            <p style="min-height: 200px;">The (electric) motor technology will deal the next years. It's not just electric cars, but also the daily life of the people. We think it will be increasingly important to achieve a higher level of performance here.</p>
+                            <p><a href="engines.html" class="btn btn-primary" role="button">Read more...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top clearing"><a href="#body">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+    </div>
+    <footer>
+        <script>
+            function datum() {
+                var d = new Date();
+                var e = d.getFullYear().toString();
+                document.write(e.substr(2, 2));
+            }
+        </script>
+        &copy; Copyrights 2016-<script>datum()</script> by <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6b;&#x6f;&#x68;&#x6c;&#x2e;&#x77;&#x61;&#x6c;&#x74;&#x65;&#x72;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#x26;&#x73;&#x75;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x3d;&#x46;&#x72;&#x6f;&#x6d;&#x20;&#x74;&#x68;&#x65;&#x20;&#x42;&#x6c;&#x65;&#x75;&#x6e;&#x2d;&#x53;&#x69;&#x74;&#x65;&#x3a;&#x26;&#x62;&#x6f;&#x64;&#x79;&#x3d;&#x50;&#x6c;&#x65;&#x61;&#x73;&#x65;&#x20;&#x74;&#x65;&#x6c;&#x6c;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x69;&#x64;&#x65;&#x61;&#x2e;" target="_blank">Walter Kohl, grad. Engineer</a> - wjk-Software&reg;. Switzerland.
+    </footer>
+</body>
+</html>

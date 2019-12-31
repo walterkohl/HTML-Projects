@@ -1,0 +1,432 @@
+﻿@font-face {
+    font-family: '3Dumb';
+    src: url('../fonts/3Dumb/2Dumb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '3Dumb';
+    src: url('../fonts/3Dumb/3Dumb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    src: url('../fonts/architects-daughter/ArchitectsDaughter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dearest';
+    src: url('../fonts/Dearest/Dearest.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dearest';
+    src: url('../fonts/Dearest/Dearest_open.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Dearest';
+    src: url('../fonts/Dearest/Dearest_outline') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Bold_Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Extended.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Extended_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Extended_Bold_Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Extended_Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Shaded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Action_Man';
+    src: url('../fonts/Action-Man/Action_Man_Shaded_Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+	font-family: 'BAUHS93';
+	src: url('/fonts/BAUHS93.eot');
+	src: local('BAUHS93'), url('/fonts/BAUHS93.woff') format('woff'), url('/fonts/BAUHS93.ttf') format('truetype');
+}
+
+html {
+    background-color: #e2e2e2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+body {
+    max-width: 960px;
+    background-color: #fff;
+    color: #333;
+    font-size: .85em;
+    font-family: Arial, "Segoe UI", Verdana, Helvetica, Sans-Serif;
+}
+
+
+a {
+    color: #0026ff;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+    a:link, a:visited,
+    a:active, a:hover {
+        color: #333;
+    }
+
+    a:hover {
+        background-color: #c7d1d6;
+    }
+
+header, footer, hgroup,
+nav, section {
+    display: block;
+}
+
+mark {
+    background-color: #a6dbed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+    h5 a:link, h5 a:visited, h5 a:active {
+        padding: 0;
+        text-decoration: none;
+    }
+
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper {
+    clear: both;
+    margin: 0 auto;
+}
+
+#body {
+    background-color: #efeeef;
+    clear: both;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+header {
+    min-height: 150px;
+    background-image: url("../Images/top_background_200x72.png");
+    background-repeat: repeat;
+    color: white;
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    margin: 10px 5px;
+}
+
+   td .row1 {
+        max-width: 200px;
+        min-width: 33%;
+        text-align:  center;
+        vertical-align: top;
+    }
+       .row1 img {
+           width: 20%;
+           height: auto;
+       }
+
+        .pageTitel {
+            font-family: Arial, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            width: auto;
+            height: 35px;
+            padding: 5px;
+            margin: 0 20%;
+            vertical-align: middle;
+            color: black;
+            -moz-box-sizing: border-box; 
+            -webkit-box-sizing: border-box; 
+            box-sizing: border-box;
+            border-radius: 5px 5px; 
+            box-shadow: #999 5px 5px; 
+            background-color: white; 
+            opacity: 0.85;
+        }
+
+   td .row2 {
+        text-align: center;
+        width: auto;
+        text-size-adjust: auto;
+        vertical-align: top;
+    }
+
+    td h6 {
+        font-family:3Dumb, 'Times New Roman', Times, serif;
+        font-size: 80%;
+        margin-left: 20%;
+        color: lime;
+        text-align: left;
+        text-size-adjust: auto;
+    }
+
+    td .site-title {
+        font-family: Dearest, Arial;
+        font-size: 300%;
+        text-size-adjust: 100%;
+        color: lime;
+    }
+
+   td h1 {
+    font-family:3Dumb, 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+    padding: 5px;
+    margin: 0 20%;
+    color: black;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    border-radius: 5px 5px; 
+    box-shadow: #999 5px 5px; 
+    background-color: white; 
+    opacity: 0.85;
+    text-size-adjust: auto;
+    }
+
+   td .row3 {
+        max-width: 25%;
+        text-align: right;
+        text-size-adjust: auto;
+        vertical-align: bottom;
+    }
+       .row3 img {
+           width: 45%;
+           height: auto;
+       }
+
+    
+footer .content-wrapper {
+    padding-top: 10px;
+    clear: both;
+    background-color: #efeeef;
+    font-size: .8em;
+    text-align: center;
+    height: 30px;
+}
+
+
+#divCookie {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 20px;
+    padding: 0 5px;
+    font-size: 0.9em;
+    display: inline-block;
+    vertical-align:text-top;
+}
+
+    #divCookie .float-left {
+        width: 90%;
+    }
+
+    #divCookie .float-right {
+        width: 10%;
+        text-align: right;
+    }
+
+    #divCookie  a:link {
+        background-color: white;
+    }
+
+.featured {
+    background-color: white;
+}
+
+
+.information {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    text-align: left;
+    margin: 20px 10px; 
+    padding: 5px;
+    border: 3px solid blue; 
+    border-radius: 10px 10px; 
+    box-shadow: #999 10px 10px; 
+    background-color: white; 
+    opacity: 0.85;
+    font-family: ArchitectsDaughter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+    .information h3 {
+        margin: 10px 0;
+        font-family: 3Dumb, Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .information a {
+        color: blue;
+        text-decoration: navy solid underline;
+    }
+
+    .top {
+        text-align: right;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .top::before {
+        content: attr(br);
+    }
+
+
+.information {
+    padding: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 100%;
+    border-radius: 12px 12px;
+    background-color: #58fc0b;
+    /* IE10 Consumer Preview */
+    background-image: -ms-linear-gradient(left, #EFFF08 0, #0EEF95 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(left, #EFFF08 0, #0EEF95 100%);
+    /* Opera */
+    background-image: -o-linear-gradient(left, #EFFF08 0, #0EEF95 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #EFFF08), color-stop(1, #0EEF95));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(left, #EFFF08 0, #0EEF95 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background-image: linear-gradient(to right, #EFFF08 0, #0EEF95 100%);
+}
+
+.privat {
+    width: 100%;
+    height: 100%;
+
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(left, black 0, gray 70%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(left, black 0, gray 70%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(left, black 0, gray 70%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, black), color-stop(1, gray));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(left, black 0, gray 70%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to right, black 0, gray 70%);
+
+    z-index: 5;
+}
+

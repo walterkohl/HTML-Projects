@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Informatik - Walter Kohl - wjk-Software&reg;</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://wjk-software.online/index.php/en/" rel="alternate" hreflang="en-GB" />
+    <link href="https://wjk-software.online/index.php/de/" rel="alternate" hreflang="de-DE" />
+
+    <meta name="description" lang="de" content="Das sind die Informationsseiten von Dipl.-Ing. Walter Kohl, wjk-Software. Elektroingenieur, Informatiker und Journalist aus Deutschland. Heue in Thailand lebend." />
+    <meta name="keywords" lang="de" content="Dipl.-Ing., Walter, Kohl, Elektroingenieur, Informatiker, Journalist, Deutschland, Thailand, Schweiz, USA, wjk, Software, grad., Engineer, Computer Scientist, Germany, Switzerland" />
+    <meta name="description" lang="en" content="This are the information site of Walter Kohl, grad. Engineer - wjk-Software. Electrical engineer, computer scientist and journalist from Germany. Living in Thailand." />
+    <meta name="keywords" lang="en" content="grad. Engineer, Walter, Kohl, electrical, engineer, computer, scientist, journalist, Germany, Thailand, Switzerland, USA, wjk, Software" />
+
+
+    <script type="text/javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+    </script>
+</head>
+<body class="center-block" id="home">
+    <form runat="server">
+        <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/jquery-ui-1.8.24.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-31520146-5', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script src="http://www.microsoftTranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**" type="text/javascript"></script>
+        <script type="text/javascript">
+            function onBtnTranslate(lang) {
+                document.getElementById('lang').value = lang;
+                if (lang == '-' || lang == '')
+                { Microsoft.Translator.Widget.RestoreOriginal(); }
+                else
+                { Microsoft.Translator.Widget.Translate('de', lang, onProgress, onError, onComplete, onRestoreOriginal, 20000); }
+            }
+            //You can use Microsoft.Translator.Widget.GetLanguagesForTranslate to map the language code with the language name
+            function onProgress(value) {
+                document.getElementById('counter').style.color = 'grey';
+                document.getElementById('counter').innerHTML = '<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Translate:&nbsp;' + Math.round(value) + "%";
+            }
+
+            function onError(error) {
+                document.getElementById('counter').style.color = 'red';
+                document.getElementById('counter').innerHTML = '<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Translate';
+                alert("Translation Error: " + error);
+            }
+
+            function onComplete() {
+                document.getElementById('counter').style.color = 'green';
+                document.getElementById('counter').innerHTML = '<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Translate&nbsp;[' + document.getElementById('lang').value + ']';
+            }
+            //fires when the user clicks on the exit box of the floating widget
+            function onRestoreOriginal() {
+                document.getElementById('counter').style.color = 'black';
+                document.getElementById('counter').innerHTML = '<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Translate&nbsp;<span class="caret"></span>';
+            }
+        </script>
+
+        <script type="text/javascript">
+            /* http://stackoverflow.com/questions/23872700/resize-font-depending-on-string-length */
+            function fontsize() {
+                var weite = 180;
+                var zeichen = 20;
+                dummyStyle = getComputedStyle(pageTitel);
+                var dwidth = parseInt(dummyStyle.width);
+                var over = dwidth - weite;
+                if (over > 0) zeichen = zeichen - over / 10;
+                pageTitel.style.width = weite + 'px';
+                pageTitel.style.fontSize = zeichen + 'px';
+            }
+
+            $(document).ready(function () {
+                if (document.getElementById('lang').value != "-" && document.getElementById('lang').value != "") onBtnTranslate(document.getElementById('lang').value);
+
+                var cook = document.cookie;
+                if (cook == "" || cook == undefined || cook.length == 0) {
+                    document.getElementById("divCookie").style.visibility = "visible";
+                }
+                else {
+                    if (readCookie(cook)) {
+                        document.getElementById("divCookie").style.visibility = "hidden";
+                    }
+                    else {
+                        document.getElementById("divCookie").style.visibility = "visible";
+                    }
+                }
+            });
+        </script>
+
+        <script type="text/javascript">
+
+            function readCookie(cook) {
+                var ca = cook.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    if (ca[i].indexOf('cookieinfo') >= 0) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function setCookie() {
+                document.cookie = "cookieinfo=true; path=/";
+                document.getElementById("divCookie").style.visibility = "hidden";
+            }
+        </script>
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5593dd5fb9ed7b9d" async="async"></script>
+
+        <div class="cookies content-wrapper" id="divCookie">
+            <div class="cookies float-left">
+                Wir verwenden Cookies. Mit dem Besuch der Site erklären Sie sich damit einverstanden!&nbsp;
+                <a runat="server" href="impressum.html#end">Mehr Informationen...</a>
+            </div>
+            <div class="cookies float-right">
+                <button ID="btnCloseCookie" onclick="setCookie()">
+                    <img src="Images/16_close.gif" Height="16" Width="16" />
+                </button>
+            </div>
+        </div>
+        <input type="hidden" id="lang" value="" />
+        <header>
+            <table>
+                <tr>
+                    <td class="row1">
+                        <p><a runat="server" href="index.html?lang=en"><img src="Images/wjk75x75Trans.png" alt="wjk-Logo" /></a></p>
+                        <div class="pageTitel" id="pageTitel">
+                            <asp:Label ClientIDMode="Static" ID="lblTile" runat="server" Text="&nbsp;">Informatik</asp:Label>
+                        </div>
+                    </td>
+                    <td class="row2">
+                        <h6>Dipl.Ing.</h6>
+                        <p class="site-title">Walter Kohl</p>
+                        <h1>Wir tun nicht nur was wir können,<br />wir können auch was wir tun!</h1>
+                    </td>
+                    <td class="row3">
+                        <a runat="server" href="~/"><img src="Images/walter_hut_1.jpg" alt="Walter Kohl" style="border: 5px outset white;" /></a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <nav class="navbar navbar-default">
+
+            <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="btn-group" role="group" aria-label="...">
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-default" onclick="window.location.href='index.html'">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home
+                        </button>
+                    </div>
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle active" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-console" aria-hidden="true"></span>&nbsp;Informatiker
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="informatik.html">Informatik</a></li>
+                            <li><a href="web.html">Web-Entwicklung</a></li>
+                            <li><a href="desktop.html">Desktop/App-Entwicklung</a></li>
+                            <li><a href="sozial.html">Sozial Media</a></li>
+                            <li><a href="kunden.html">Kundenliste</a></li>
+                            <li class="dropdown-header">Eingeschränkter Zugriff</li>
+                            <li><a href="cv.aspx">Meine CVs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;Journalist
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="journalist.html">Journalismus</a></li>
+                            <li><a href="politik.html">Politik</a></li>
+                            <li><a href="wirtschaft.html">Wirtschaft</a></li>
+                            <li><a href="kultur.html">Feuilleton</a></li>
+                            <li><a href="technik.html">Technik</a></li>
+                            <li class="dropdown-header">Wechselt zu Informatik</li>
+                            <li><a href="sozial.html">Sozial Media</a></li>
+                            <li class="dropdown-header">Externe Sites</li>
+                            <li><a href="https://walter-kohl.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Politischer Blog</a></li>
+                            <li><a href="https://walters-books.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Walters Bücher</a></li>
+                            <li><a href="https://walters-games.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Walters Spiele</a></li>
+                            <li><a href="https://wjk-software.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;wjk-Software</a></li>
+                            <li><a href="https://wjk-securitysuite.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;wjk-Security</a></li>
+                            <li class="dropdown-header">Von mir betreut</li>
+                            <li><a href="https://nans-online-shop.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Nan's Online Shop Blog (DE)</a></li>
+                            <li><a href="http://depattayarentaroom.blogspot.com/" target="_blank"><img src="https://www.blogger.com/favicon-image.g?blogID=3758476591087618046" alt="Pattaya Rent-a-Room-Logo" />&nbsp;Pattaya Rent-a-Room (deutsch)</a></li>
+                            <li><a href="http://enpattayarentaroom.blogspot.com/" target="_blank"><img src="https://www.blogger.com/favicon-image.g?blogID=3758476591087618046" alt="Pattaya Rent-a-Room-Logo" />&nbsp;Pattaya Rent-a-Room (English)</a></li>
+                            <li><a href="http://bleun-engineering.blogspot.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Bleun Engineering</a></li>
+                            <li><a href="http://deblog.fishermans-cafe.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Fishermans Cafe (deutsch)</a></li>
+                            <li><a href="http://enblog.fishermans-cafe.com/" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Fishermans Cafe (English)</a></li>
+                            <li class="dropdown-header">Eingeschränkter Zugriff</li>
+                            <li><a href="https://thaiwirtschaft.blogspot.com/?zx=d4dde36968acf0e1" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" />&nbsp;Wirtschaftsnachrichten Thailand</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-default" onclick="window.location.href='elektro.html'">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Elektroingenieur
+                        </button>
+                    </div>
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Impressum u.a.
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="about.html">Über mich</a></li>
+                            <li><a href="contact.html">Kontakt</a></li>
+                            <li class="dropdown-header">Weitere Profile im Internet</li>
+                            <li><a href="https://th.linkedin.com/pub/walter-kohl/57/738/737" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn-Logo" style="height: 16px" />&nbsp;LinkedIn DE</a></li>
+                            <li><a href="https://th.linkedin.com/pub/walter-kohl/57/738/737/en" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn-Logo" style="height: 16px" />&nbsp;LinkedIn EN</a></li>
+                            <li><a href="https://www.facebook.com/walter.kohl1" target="_blank"><img src="Images/facebook16x16.png" alt="Facebook-Logo" />&nbsp;Facebook (public)</a></li>
+                            <li><a href="https://www.facebook.com/kohl.walter" target="_blank"><img src="Images/facebook16x16.png" alt="Facebook-Logo" />&nbsp;Facebook (privat)</a></li>
+                            <li><a href="https://plus.google.com/u/0/+WalterKohl-wjk-software/posts" target="_blank"><img src="Images/wjkLogo16x16.png" alt="wjk-Logo" style="height: 16px" />&nbsp;Google+ (Seite: Walter Kohl - wjk-Software)</a></li>
+                            <li><a href="https://plus.google.com/u/0/103485186282722615846" target="_blank"><img src="Images/google16x16.jpg" alt="Google+-Logo" />&nbsp;Google+ (Seite: Walter Kohl - ThaiFarang)</a></li>
+                            <li><a href="https://plus.google.com/u/0/115515412767908708592/" target="_blank"><img src="Images/google16x16.jpg" alt="Google+-Logo" />&nbsp;Google+ (Seite: Walter Kohl)</a></li>
+                            <li><a href="https://twitter.com/WalterKohl" target="_blank"><img src="Images/twitter16x16.png" alt="Twitter-Logo" />&nbsp;Twitter (Walter Kohl)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>&nbsp;wjk-Software&reg;&nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.wjk-software.online" target="_blank">Startseite</a></li>
+                            <li><a href="https://www.wjk-software.online/index.php/de/hilfe" target="_blank">Support</a></li>
+                            <li><a href="https://www.wjk-software.online/index.php/de/jobs-en" target="_blank">Jobs</a></li>
+                            <li><a href="https://www.wjk-software.online/index.php/de/" target="_blank">Communitiy</a></li>
+                            <li><a href="https://www.wjk-software.online/index.php/de/forum-de" target="_blank">Foren</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" id="counter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;Translate&nbsp;<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="javascript:onBtnTranslate('en')">English</a></li>
+                            <li><a href="javascript:onBtnTranslate('es')">Español</a></li>
+                            <li><a href="javascript:onBtnTranslate('fr')">Français</a></li>
+                            <li><a href="javascript:onBtnTranslate('it')">Italiano</a></li>
+                            <li><a href="javascript:onBtnTranslate('ru')">русский</a></li>
+                            <li><a href="javascript:onBtnTranslate('th')">ไทย</a></li>
+                            <li><a href="javascript:onBtnTranslate('zh')">中文</a></li>
+                            <li><a href="javascript:onBtnTranslate('jp')">日本語</a></li>
+                            <li><button type="button" onclick="javascript:onBtnTranslate('-')" ID="btnNoTranslate"><span class="glyphicon glyphicon-triangle-left"></span>&nbsp;Zum Original</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="btn-group btn-group-sm">
+                <a href="#start" class="btn btn-default">Informatik</a>
+                <a href="#info" class="btn btn-default">Projekte</a>
+                <a href="#network" class="btn btn-default">Netzwerke</a>
+                <a href="#databases" class="btn btn-default">Datenbanken</a>
+                <a href="#schulung" class="btn btn-default">Schulung</a>
+                <a href="#gutachten" class="btn btn-default">Gutachter</a>
+                <a href="#end" class="btn btn-default">Informatives</a>
+            </div>
+        </div>
+
+        <section id="start" class="information">
+            <p>Ich wusste lange Zeit nicht, was ich hier schreiben sollte...</p>
+            <h3>Da kam mir die Idee:</h3>
+            <p>Du mußt weglassen können!</p>
+            <p>Für mich wäre es absolut nicht machbar, alles auszuführen, was ich in der Informatik bisher gemacht habe. Siehe <a href="#end">Informatives</a>, wie breit dieses Feld gefächert ist. Daher habe ich einige wichtige Punkte herausgegriffen. Die für mich wichtigsten Aspekte finden Sie sowieso unter &quot;(...-)Entwicklung&quot;</p>
+            <p>
+                Den richtigen Einstieg fand ich durch meinen Freund <a href="http://www.mervasys.de/" target="_blank">Peter Raab</a>, der hervorragende Analytiker und &quot;Technik-Freak&quot;, er hat mir gezeigt, was mit einem Computer zu machen ist.
+                Ich werde die Nächte in der Frankfurter Taunusstraße nie vergessen und danke noch heute seiner lieben Frau, Gabi, für ihr Verständnis, für die beiden Verrückten.
+            </p>
+            <p>
+                Bevor ich anfing mich mit <a href="https://de.wikipedia.org/wiki/C%2B%2B" target="_blank">C++</a> zu befassen, habe ich natürlich Umwege gehabt über <a href="https://de.wikipedia.org/wiki/Assembler_(Informatik)" target="_blank">Assembler</a>, ich danke <a href="https://de.wikipedia.org/wiki/Peter_Norton" target="_blank">Peter Norton</a> für sein Buch.
+                <br />Und Peter Raab und ich haben uns mit "<a href="https://de.wikipedia.org/wiki/COMAL" target="_blank">UniComal</a>" angefreundet. Während ich diesen Weg weiter ging und später an der "<a href="https://www.inta.cl/" target="_blank">Universidad de Chile - INTA</a>" auch Vorlesungen darüber hielt, hat Peter sich auf "C", "C++" spezialisiert und ist heute, wie immer, ein echtes "As" in seinem Bereich.
+            </p>
+            <p>So ging es immer weiter, einmal über Hardware (der ich mich eigentlich verweigerte) bei der "DATKO GmbH", über Standard-Applikationen (wer kennt noch <a href="https://de.wikipedia.org/wiki/Framework_(Software)" target="_blank">Framework?</a>), bis man sich, ich ähnlich wie Peter, endlich entschließen mußte, wohin der Weg führen sollte. Ich habe mich für "<a href="https://de.wikipedia.org/wiki/Microsoft" target="_blank">Microsoft</a>" entschieden und bis heute nicht bereut.</p>
+            <p>Es gab immer wieder Wegbegleiter, wie <a href="http://www.jfranken.de/startseite.de.html" target="_blank">Johannes Franken</a>. Ich lernte ihn als ganz jungen Mann kennen und erkannte das Potenzial, das in ihm steckt!<br />Oder die Leute von <a href="http://www.ghostnet.de" target="_blank">"GhostNet GmbH"</a>. Die wohl inzwischen aufgeben mußten.</p>
+            <p>Es sind nur zwei, die ich hier aufgeführt habe. es müßten hundert sein, die ich schätzen und kennengelernt habe. Last but not least, natürlich meinen Chefentwickler, Martin Claviez und meinen Zwillingsbruder, <a href="http://www.bulpros.com/adolf-kohl.html" target="_blank">Adolf Kohl</a>, unsere Wege, durch die vielen gemeinsamen Projekte, kreuzen sich immer wieder.</p>
+            <p>&nbsp;</p>
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <section id="info" class="information">
+            <h3>Projektmanagement</h3>
+            Auch in diesem Bereich gibt es vieles was ich in diesem Rahmen, aus Platzmangel, einfach nicht aufführen kann. Daher nur einiges wichtiges. Eine Zusammenfassung aller von mir umgesetzten Projekte finden Sie selbstverständlich in meinen <a href="cv.aspx">CVs</a>.<br />
+            <br />
+            Eines meiner schönsten und ersten Projekte war mit dem "<a href="https://books.google.fr/books?id=4-ajBwAAQBAJ&lpg=PR6&ots=p7I8hq7oPc&dq=walter%20kohl%20wjk&pg=PR1#v=onepage&q=walter%20kohl%20wjk&f=false" target="_blank">Institut für Sozialwissenschaftliche Forschung</a> (ISF)" in Marburg entstanden. Wir haben, mit den Mitteln die es damals gab, auf der Grundlage von PC und &quot;<a href="https://de.wikipedia.org/wiki/DBASE" target="_blank">dBase</a>&quot; (später &quot;<a href="http://www.foxprohistory.org/" target="_blank">FoxBase</a>&quot;) die Daten von Umfragen erfasst und vor allen Dingen ausgewertet. Mit allem was die <a href="https://de.wikipedia.org/wiki/Statistik" target="_blank">Statistik</a> so hergibt. Es war eine tolle Zusammenarbeit mit Christian Boß und Volker Roth und allen anderen Kolleginnen und Kollegen des Institutes.<br />
+            <br />
+            Sehr wichtige Erfahrungen habe ich beim Aufbau einer Musterverwaltungsstelle der <a href="http://igmetall-hanaufulda.de/" target="_blank">IG Metall Hanau/Fulda</a> gesammelt. Das Projekt umfassste den Um- und Ausbau der Räumlichkeiten, über die Einrichtung, das Design usw. Ging über die Beschaffung und die Einrichtung mit PCs und der Software; der Software-Anpassung auf der Grundlage unserer <a href="https://de.wikipedia.org/wiki/Systemanalyse" target="_blank">Systemanalyse</a> und von uns entwickelten Aufgabenbeschreibungen. Umfasste Schulungen für die Mitarbeiter, Erstellung von Tamplates und Datenbaken; Vernetzung der Computer (per <a href="https://de.wikipedia.org/wiki/Virtual_Private_Network" target="_blank">VPN</a> bis nach Fulda). Es war sehr umfangreich und ohne die tätige Mithilfe der Kolleginnen und Kollegen hätte es gewiss nicht funktioniert. Da war ich froh einen Freund und Kommilitonen der &quot;<a href="https://de.wikipedia.org/wiki/Europ%C3%A4ische_Akademie_der_Arbeit" target="_blank">Akademie der Arbeit</a>&quot; bei der IG Metall zu haben: Günther Seiler.<br />
+            <br />
+            Das nächste, noch größere Projekt führte ich in den USA durch. Leider ist es mir verboten (aufgrund einer Geheimhaltungsvereinbarung), viel darüber zu sagen. Es handelte sich um eine sehr große Anwaltskanzlei in Miami, Fl. mit Filialen in in New York (World Trade Center!, damals), Chicago, Hamburg (Deutschland) und Panama. Aufgabe war es&nbsp; &quot;Microsoft Office&quot; an die Bedüfnisse der Kanzlei anzupassen und die Mitarbeiter zu schulen. Die Grundlagen bildeten wieder eigene System- und Arbeitsablaufanalysen.<br />
+            <br />
+            Durch die &quot;<a href="https://de.wikipedia.org/wiki/Jahr-2000-Problem" target="_blank">Jahr-2000-Problematik</a>&quot; fand ich mich plötzlich wieder in Deutschland zurück, wo ich und meine Mitarbeiter in fast allen größeren Banken vertreten waren. Dies ist nicht als einzelnes Projekt zu betrachten, da wir an vielen &quot;Baustellen&quot; beschäftigt gewesen sind.<br />
+            <br />
+            Das ändert sich, als diese sehr streßige Zeit zu ende ging und wieder &quot;normal&quot; gearbeitet werden konnte. Ich wechselte von der &quot;<a href="https://de.wikipedia.org/wiki/Commerzbank" target="_blank">Commerzbank</a>&quot; zu &quot;<a href="https://www.trustinternational.com/trustinternational/index.htm" target="_blank">TRUST International GmbH</a>&quot;, blieb also in Frankfurt am Main, meiner Heimat aus Studienzeiten. Bei &quot;TRUST&quot; entwickelten wir vornehmlich Datenbanken und webbasierte Frontends zur Verwaltung von Hotels in der Relation zu Firmenkunden, die mit Hotelketten eigene Tarif vereinbart hatten. Dies war die erste Zusammenarbeit mit meinem späteren Chefentwickler, Dipl.-Inf. Martin Claviez.<br />
+            <br />
+            Es folgten viele kleine und mittlere Projete, die mich schließlich in die Schweiz führten, wo ich an Projekten der &quot;<a href="https://de.wikipedia.org/wiki/Die_Schweizerische_Post" target="_blank">Schweizer Post</a>&quot; und der <a href="http://www.bit.admin.ch/" target="_blank">schweizer Bundesregierung</a> beteiligt war.<br />
+            Hier in Thailand habe ich keine grüßeren Projekte mehr betreut, nur viele kleinere, die aber sehr umfassend waren. Derzeit führe ich ein Web-Projekt durch, das vielschichtig auf meinen Kenntnissen von &quot;<a href="sozial.aspx" target="_blank">Social Media</a>&quot; aufbaut. Siehe &quot;<a href="http://www.fishermans/cafe.com" target="_blank">Fishermans Cafe</a>&quot; unter <a href="web.aspx" target="_blank">Web-Entwicklung</a>.
+            <p>&nbsp;</p>
+            <p><b>Ich bin im schweizer Managementsystem <a href="https://de.wikipedia.org/wiki/Hermes_(EDV)" target="_blank">HERMES</a> zertifiziert.</b></p>
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <section id="network" class="information">
+            <h3>Lan-/WLan-/Server-Know-How</h3>
+            Meine ersten Netzwerke habe ich für die &quot;Datko GmbH&quot;, &quot;Car Connections, Inc. und die &quot;Frankfurter Werkstätten&quot; gebaut. Alles noch unter &quot;<a href="https://de.wikipedia.org/wiki/Netware" target="_blank">Novell Netware</a>&quot;. Für die &quot;<a href="http://www.reha-werkstaetten.de/" target="_blank">Frankfurter Werkstätten</a>&quot;, sie betreuen Behinderteneinrichtungen, habe ich auch die Software geschrieben, die Mitarbeiter geschult und all das gemacht, was zu einem solch umfassenden Projekt gehört. Von da an gehören Netzwerke einfach zu meinem Berufsleben dazu.<br />
+            <br />
+            Mit &quot;Microsoft Netzwerken&quot; beschäftigte ich mich als erstes in den USA. Das führte mich als deutsch sprechender Spezialist dann zur &quot;Commerzbank AG&quot;, zurück nach Deutschland.
+            <p>&nbsp;</p>
+            <p><b>Ich bin auf <a href="https://de.wikipedia.org/wiki/Microsoft_Windows_NT_4.0" target="_blank">Microsoft Server 4.0</a> zertifiziert.</b></p>
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <section id="databases" class="information">
+            <h3>Datenbanken</h3>
+            <p>(Muß ich überarbeiten...)</p>
+            <ul>
+                <li>Btrieve</li>
+                <li>DBase/FoxBase</li>
+                <li>MS Access</li>
+                <li>MySQL</li>
+                <li>MS SQL</li>
+            </ul>
+
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <section id="schulung" class="information">
+            <h3>Schulungsszenarien</h3>
+            Am Anfang meines Informatikerlebens war es fast unerlässlich in allen Projekte auch Schulungen anzubieten. Die DV war im entstehen begriffen und Standards lange nicht erreicht. Voll umfängliche Programme, die nur Schulungen betraffen, habe ich nur gemeinsam mit der <a href="http://www.igmetall-bezirk-mitte.de/" target="_blank">IG Metall Hessen</a> und dem Hauptvorstand durchgeführt und entwickelt.<br />
+            <br />
+            Das umfangreichste Projekt waren aber die Gastvorlesungen an der &quot;<a href="http://www.inta.cl/" target="_blank">INTA</a>&quot;, &quot;Universidad der Chile. Haptsächlich zu &quot;<a href="http://www.macharsoft.co.uk/unicomal/unicomal.html" target="_blank">UniComal</a>&quot; als Programmiersprache und &quot;<a href="https://en.wikipedia.org/wiki/Btrieve" target="_blank">Btrieve</a>&quot; als Datenbank-Applikation.<br />
+            <br />
+            <p>&nbsp;</p>
+            <p><b>Ich bin <a href="https://de.wikipedia.org/wiki/European_Computer_Driving_Licence" target="_blank">„European Computer Driving License” (ICDL/ECDL)</a> zertifiziert.</b></p>
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <section id="gutachten" class="information">
+            <h3>Berufsgenossenschaftlich/Gutachterlich</h3>
+            Ich bin öfters durch Gerichte, zumeist Arbeitsgerichte, zum Gutachter bestellt worden. Diese kleine Nebentätigkeit setzte sich jedoch auch in der Zusammenarbeit mit den Gewerkschaften und Betriebsräten fort, wo ich über einen längeren Zeitraum ins Besonderen die Kolleginnen und Kollegen der &quot;<a href="https://www.ngg.net/" target="_blank">Gewerkschaft Nahrung Genuss Gaststaetten</a>&quot; beriet. Allerdings habe ich auch den Hauptvorstand der &quot;Commerzbank AG&quot; gutachterlich unterstützt.<br />
+            <br />
+            Mit den Berufsgenossenschaften diskutierte ich im Projekt &quot;IG Metall Vw.-Stelle Hanau/Fulda&quot; die Standards für DV-Arbeitsplätze. Wie sie teilweise heute noch in deren Empfehlungen zu finden sind.
+            <p>&nbsp;</p>
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <section id="end" class="information">
+            <h3>Informatives</h3>
+            <p>&nbsp;</p>
+            <div class="clear-fix">
+                <div style="max-width: 50%" class="float-left">
+                    <ul>
+                        <li>
+                            Mit dem Thema Graphikdesign usw. möchte ich mich nicht weiter befassen. Wo nötig, kann ich einiges tun, allerdings gibt es viel bessere Leute in diesem Bereich. Einiges, was ich selbst gemacht habe, finden Sie in meinen CVs.
+                        </li>
+                        <li>
+                            <a href="https://de.wikipedia.org/wiki/Informatik" target="_blank">Wikipedia: Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://de.wikipedia.org/wiki/Software" target="_blank">Wikipedia: Software</a>
+                        </li>
+                        <li>
+                            <a href="https://de.wikipedia.org/wiki/Softwaretechnik" target="_blank">Wikipedia: Softwaretechnik</a>
+                        </li>
+                        <li>
+                            <a href="http://www.uni-frankfurt.de/42341293/fachbereich" target="_blank">J.-W.-Goethe-Universitaet, FB Informatik</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="max-width: 310px;" class="float-right">
+                    <p><b>Die Entstehung der Site können Sie auf Wordpress verfolgen:</b></p>
+                    <p>
+                        <a class="wordpress-timeline" lang="de" href="https://wjksoftware.wordpress.com" width="300" height="500" data-link-color="#000000" data-theme="light" data-show-gravatars="true" target="_blank">Dipl.-Ing. Walter Kohl - wjk-Software®</a>
+                        <script type="text/javascript">(function (d) { var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT'); p.type = 'text/javascript'; p.async = true; p.src = '//widgets.wp.com/platform.js'; f.parentNode.insertBefore(p, f); }(document));</script>
+                    </p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <img src="Images/Microsoft_Partner_Network_Logo.png" alt="Microsoft Partner" title="Microsoft Partner" />&nbsp;
+                <img src="Images/SWp_i_rgb_68.png" alt="Intel Software-Partner" title="Intel Software-Partner" />
+            </div>
+            <br />
+            <div class="top"><a href="#home">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </section>
+
+        <footer>
+            <div class="content-wrapper">
+                <p>&copy; 1988-18 by <a href="https://www.wjk-software.online" target="_blank">Walter Kohl - wjk-Software&reg;</a>, Switzerland. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            var browserLang = navigator.language;
+            var queryLang = getParameterByName("lang");
+            var lang = "-";
+
+            if (queryLang != "") {
+                lang = queryLang;
+            } else {
+                lang = browserLang.split('-')[0];
+            }
+            if (lang != "" && lang != "-" && lang != "de") {
+                document.getElementById('lang').value = lang;
+                onBtnTranslate(lang);
+            }
+        </script>
+
+    </form>
+</body>
+</html>

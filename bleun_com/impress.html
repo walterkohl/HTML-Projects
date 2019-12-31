@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Impress - Bleun Engineering</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Abel|Orbitron:400,500,900,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="author" content="Walter Kohl, wjk-Software" />
+    <meta name="description" content="Web-Site of Bleun-Engineering in Germany und Thailand. A team of developers for technical products for technical products with a focus on infrared, magnetic generators and (electric) motor technology." />
+    <meta name="keywords" content="Bleun, Engineering, Engineers, Germany, Thailand, developers, magnet, generators, electric, motors, infrared" />
+    <meta name="generator" content="Visual Studio" />
+</head>
+<body id="body">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $(window).resize(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            if (document.body.clientWidth < 920) {
+                $('#pictop').hide();
+            }
+            else {
+                $('#pictop').show();
+            }
+            var cook = document.cookie;
+            if (cook == "" || cook == undefined || cook.length == 0) {
+                document.getElementById("cookie").style.visibility = "visible";
+            }
+            else {
+                if (readCookie(cook)) {
+                    document.getElementById("cookie").style.visibility = "hidden";
+                }
+                else {
+                    document.getElementById("cookie").style.visibility = "visible";
+                }
+            }
+            var fileNameDE = "http://www.bleun.de/" + location.href.split("/").slice(-1);
+            $('#changeDE').attr('href', fileNameDE);
+            var fileNameEN = "http://www.bleun.com/" + location.href.split("/").slice(-1);
+            $('#changeEN').attr('href', fileNameEN);
+        });
+        function readCookie(cook) {
+            var ca = cook.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                if (ca[i].indexOf('cookieinfo') >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = "cookieinfo=true; path=/";
+            document.getElementById("cookie").style.visibility = "hidden";
+        }
+    </script>
+    <header>
+        <div class="container-fluid">
+            <div class="row" style="background-color: white;" id="cookie">
+                <div class="col-xs-8 col-md-10">
+                    <div id="cookies1">
+                        <span>We use to the page control "<a href="impress.html#cookies">Cookies</a>". By visiting the site you agree.</span>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2">
+                    <div id="cookies2">
+                        <a href="javascript:setCookie()"><img src="images/2.jpg" alt="close" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="compName">
+                        Bleun Engineering International
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div id="headerImg1">
+                        <a href="http://www.bleun.de" target="_self"><img src="images/bleun-logo.png" alt="Bleun-Logo" id="bleunLogo" /></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="headerImg2">
+                        <img src="images/cl2.gif" alt="Service" class="rotate img-responsive" id="pictop" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="btnLang">
+                        <a href="http://www.bleun.de" id="changeDE" target="_self" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Wechselt zur deutschen Site."><img src="images/de.jpg" alt="deutsch" /></a>
+                        <a href="http://www.bleun.com" id="changeEN" target="_self" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="English is already selected."><img src="images/gb.jpg" alt="English" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>   
+    <nav class="navbar navbar-default information" style="opacity: 1.0; background: blue;">
+        <div class=" container-fluid">
+            <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Navigation show/hide</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: blue;">
+                <ul class="nav navbar-nav" role="navigation">
+                    <li><a href="index.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-home"></span>&nbsp;Homepage<span class="sr-only">(up-to-date)</span></a></li>
+                    <li><a href="about.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-user"></span>&nbsp;About us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle btn-lg" style="color: white;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span>&nbsp;Development&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="background: white;">
+                            <li><a href="infrared.html" role="button" class="btn-lg" style="color: blue;">Infrared</a></li>
+                            <li><a href="generator.html" role="button" class="btn-lg" style="color: blue;">Generators</a></li>
+                            <li><a href="engines.html" role="button" class="btn-lg" style="color: blue;">Motors</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" role="navigation">
+                    <li class="active"><a href="impress.html" role="button" class="btn-lg" style="color: blue;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Impress</a></li>
+                    <li><a href="contact.html" role="button" class="btn-lg" style="color: white;"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Impress<br /><small>Information according to V. i. S. d. P. G. / T. K. G. [Germany]</small></h1>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <div style="min-height: 200px;" class="information">
+                        <h3>Impress</h3>
+                        <h6><b>Ricardo Neubert</b></h6>
+                        <h6>Binzstra&szlig;e 18</h6>
+                        <h6>D-13189 Berlin</h6>
+                        <h6>Telefon: +49 30 2904 7254</h6>
+                        <h6>eMail: <a href="contact.html">Please use the contact form</a></h6>
+                        <h6>USt-IdNr.: DE 235151967</h6>
+                        <p>&nbsp;</p>
+                        <h6><u>Text and content:</u> <b>Dietmar Loewe</b></h6>
+                        <h6><u>Design:</u> <b>Walter Kohl</b></h6>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="min-height: 200px;" class="information">
+                        <h3>Data Protection</h3>
+                        <h6>The operators of these sites take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the legal data protection regulations as well as this data protection statement.</h6>
+                        <h6>The use of our website is normally possible without giving personal data. If personal data (for example name, address or e-mail addresses) are collected on our pages, this is always done on a voluntary basis as far as possible. These data will not be passed on to third parties without your express consent.</h6>
+                        <h6>We would like to point out that data transmission on the Internet (for example, when communicating via e-mail) can have security gaps. A complete protection of the data before access by third parties is not possible.</h6>
+                        <h4>Server-Log-Files</h4>
+                        <h6>
+                            The provider of the pages automatically collects and saves information in so-called server log files, which your browser automatically transmits to us. These are:
+                            Browsertyp/ Browserversion
+                            Operating system
+                            Referrer URL
+                            Hostname of the accessing computer
+                            Time of server request
+                        </h6>
+                        <h6>
+                            These data can not be attributed to specific persons. This data is not merged with other data sources. We reserve the right to check these data at a later date, if we are aware of any specific indications for unlawful use.
+                        </h6>
+                        <h4>Contact form</h4>
+                        <h6>If you send us inquiries by means of a contact form, your information from the inquiry form, including the contact details given there, will be stored by us for the purpose of processing the inquiry and for the case of connection questions. We will not share this information without your consent. </h6>
+                        <h4>Information, deletion, blocking</h4>
+                        <h6>You are always entitled to free information about your stored personal data, its origin and recipient, the purpose of data processing, and the right to correct, block or delete this data. To this end, as well as to further questions regarding the subject of personal data, you can contact us at any time at the address given in the imprint.</h6>
+                        <br />
+                        <h6>Source reference: <a href="https://www.e-recht24.de" target="_blank">https://www.e-recht24.de</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="top clearing"><a href="#body">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="information">
+                        <h3>Disclaimer</h3>
+                        <h6>The engagement of an attorney to pay notice without prior notice, we consider as a violation of the current duty to mitigate. In this connection, we also refer to the Federal Supreme Court ruling, Act VI ZR 144/11 of 27.03.2012.</h6><br />
+                        <h3>Liability for content</h3>
+                        <h6>As a service provider, we are responsible for our own content on these pages according to the general laws according to § 7 Abs.1 TMG. However, according to §§ 8 to 10 TMG, as a service provider, we are not obliged to monitor any third-party information transferred or stored, or to investigate circumstances which indicate an illegal activity. Obligations to remove or block the use of information according to general laws remain unaffected. Liability in this respect, however, is only possible from the time of knowledge of a concrete infringement. If we become aware of any such infringements, we will immediately remove such content. (Source: Disclaimer eRecht24)</h6><br />
+                        <h3>Liability for links</h3>
+                        <h6>Our offer contains links to external websites of third parties on whose content we have no influence. Therefore, we can not assume any liability for these third-party contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, a permanent control of the content of the linked pages is not reasonable without concrete indications of an infringement. If we become aware of legal violations, we will immediately remove such links. (Source: Disclaimer eRecht24)</h6><br />
+                        <h3>Copyright</h3>
+                        <h6>The content and works created by the site operators on these pages are subject to German copyright law. The copying, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. Insofar as the content on this site has not been created by the operator, the copyrights of third parties are respected. In particular contents of third parties are marked as such. If you are nevertheless aware of a copyright infringement, we ask for a corresponding note. If we become aware of legal violations, we will immediately remove such content.</h6><br />
+                    </div>
+                    <div class="top clearing"><a href="#body">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+                    <div class="information" id="cookies">
+                        <h3>Cookies</h3>
+                        <h6>
+                            When you visit our site, we send cookies to your computer or other device. Cookies are small files that uniquely identify your browser. Cookies are used to store user preferences and information that we need to navigate.<br />
+                            If you use links on our site, you may be redirected to third-party content, which may result in the use of cookies. Their handling is beyond our knowledge and we can not assume any responsibility for this.
+                        </h6>
+                        <h3>Third Circuit Display</h3>
+                        <h6>
+                            As a third party, Google uses cookies to show ads on your site.
+                            <br />By using the DART cookie, the ads will be enabled by Google's visits to this and other sites on the Internet.
+                            <br />Users can disable the use of the DART cookie by accessing Google's privacy policy for the ad network and content advertising network.<br />
+                        </h6>
+                        <h3>Data protection for the use of social networks</h3>
+                        <h6>
+                            On our pages, plugins from different social networks are integrated ("Facebook", "Twitter", "Google", "LinkedIn", etc.). The plugins can be seen on the respective logo of the publisher. When you visit our pages, the plug-ins are used to establish a direct connection between your browser and the publisher servers. The operators will be informed that you have visited our site with your IP address. If you click the publisher buttons while you are logged into your account, you can link the content of our pages to the content of the social networks. This allows the editors of the buttons to assign our pages to your user account. We would like to point out that as a provider of the pages we are not aware of the content of the transmitted data as well as their use by the publishers. For more information, see the privacy policy of each social network.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="top clearing"><a href="#body">Top&nbsp;<span class="glyphicon glyphicon-arrow-up"></span></a></div>
+        </div>
+    </div>
+    <footer>
+        <script>
+            function datum() {
+                var d = new Date();
+                var e = d.getFullYear().toString();
+                document.write(e.substr(2, 2));
+            }
+        </script>
+        &copy; Copyrights 2016-<script>datum()</script> by <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6b;&#x6f;&#x68;&#x6c;&#x2e;&#x77;&#x61;&#x6c;&#x74;&#x65;&#x72;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#x26;&#x73;&#x75;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x3d;&#x46;&#x72;&#x6f;&#x6d;&#x20;&#x74;&#x68;&#x65;&#x20;&#x42;&#x6c;&#x65;&#x75;&#x6e;&#x2d;&#x53;&#x69;&#x74;&#x65;&#x3a;&#x26;&#x62;&#x6f;&#x64;&#x79;&#x3d;&#x50;&#x6c;&#x65;&#x61;&#x73;&#x65;&#x20;&#x74;&#x65;&#x6c;&#x6c;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x69;&#x64;&#x65;&#x61;&#x2e;" target="_blank">Walter Kohl, grad. Engineer</a> - wjk-Software&reg;. Switzerland.
+    </footer>
+</body>
+</html>

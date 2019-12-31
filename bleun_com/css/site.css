@@ -1,0 +1,220 @@
+html{
+    background-color: lightgrey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+
+body
+{
+    max-width: 920px;
+    margin: 0 auto;
+    color: white;
+    background: blue;
+    background: -webkit-radial-gradient(circle, lightgray, blue 20%, #000066);
+    background: -o-radial-gradient(circle, lightgray, blue 20%, #000066);
+    background: -moz-radial-gradient(circle, lightgray, blue 20%, #000066);
+    background: radial-gradient(circle, lightgray, blue 20%, #000066);
+}
+
+a:link{
+    color: orange;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: lime;
+    background-color: blue;
+} 
+
+
+footer, header {
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+.clearing {
+    clear: both;
+    width: 100%;
+}
+
+h2, h3, h4 {
+    margin: 0;
+    font-family: 'Abel','Arial Unicode MS';
+    font-weight: 700;
+}
+h1 {
+    color: whitesmoke;
+    font-family: 'Orbitron','Arial Unicode MS';
+    font-size: 200%;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+h1 small {
+    color: lightgray;
+}
+h2 {
+    color: ghostwhite;
+    font-size: 180%;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 150%;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+#compName {
+    font-family: 'Orbitron','Arial Unicode MS';
+    font-weight: 700;
+    font-size: 150%; 
+    padding: 10px;
+    text-align: left;
+}
+
+#cookies1 {
+    background-color: white;
+    color: #000066;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+}
+
+#cookies2 {
+    background-color: white;
+    text-align: right;
+}
+#cookies2 img {
+    height: 16px;
+    width: auto;
+    border: 0;
+}
+
+#headerImg1 {
+    margin-left: 20%;
+    margin-right: 40%;
+}
+#headerImg1 img {
+    max-width: 250px;
+    height: auto;
+}
+
+#btnLang {
+    margin-right: 8px;
+    text-align: right;
+}
+#btnLang img {
+     height: 16px; 
+     width: 24px;
+}
+
+#content {
+    border: 5px solid silver;
+    border-radius: 10px 10px;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    clear: both;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.information {
+    margin: 20px 20px;
+    padding: 5px;
+    min-height: 50px;
+}
+
+.rotate {
+    -moz-transform: rotate(-30deg); /* Firefox 3.6 Firefox 4 */
+    -webkit-transform: rotate(-30deg); /* Safari */
+    -o-transform: rotate(-30deg); /* Opera */
+    -ms-transform: rotate(-30deg); /* IE9 */
+    transform: rotate(-30deg); /* W3C */
+}
+
+.top {
+        text-align: right;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    margin: 10px 5px;
+    background-color: #000066;
+    color: white;
+    text-align: center; 
+    border: 0; 
+}
+
+   td .row3 {
+        max-width: 50%;
+        text-align: right;
+        text-size-adjust: auto;
+        vertical-align: top;
+    }
+       .row3 img {
+           width: 85%;
+           height: auto;
+       }
+       td .row2 {
+        text-size-adjust: auto;
+        vertical-align: bottom;
+    }
+       .row2 img {
+           padding-left: 150px;
+           width: 350px;
+           height: auto;
+       }
+
+
+
+input, textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  border:1px solid #ccc;
+  font-size:16px;
+  width:300px;
+  min-height:20px;
+  display:block;
+  margin-bottom:15px;
+  margin-top:5px;
+  outline: none;
+
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+  border-radius:5px;
+}
+/*
+    :invalid { 
+      border-color: #e88;
+      -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+      -moz-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+      -o-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+      -ms-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+      box-shadow:0 0 5px rgba(255, 0, 0, .8);
+    }
+    input:required {
+      border-color: #88a;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+      -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+      -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+      box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+    }
+*/
